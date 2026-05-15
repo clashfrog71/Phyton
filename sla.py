@@ -17,6 +17,7 @@ def tudo():
             subprocess.check_call("cls", shell=True)
             print('aplicação encerrada')             
    except:
+      
       opcao_invalida()         
 def opcao_invalida():
    print('Opção Ivalida')
