@@ -11,6 +11,12 @@ def tudo():
             print('1 registrar um restaurante')
          case 2:
             print('2 listar restaurantes')
+         case 3:
+            print('encerrando aplicação...')
+            time.sleep(1)
+            subprocess.check_call("cls", shell=True)
+            print('Aplicação encerrada')
+            exit
          case _:
             print('opção invalida! encerrando aplicação')
             time.sleep(2)
