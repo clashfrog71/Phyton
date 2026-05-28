@@ -1,6 +1,6 @@
 import subprocess
 import time
-restaurantes = []
+restaurantes = ['pizza','tomate']
 def tudo():
    try:
       print('opções')
@@ -12,7 +12,7 @@ def tudo():
          case 1:
             cadastrar_restaurante()
          case 2:
-            print('2 listar restaurantes')
+            listar_restaurantes()
          case 3:
             print('encerrando aplicação...')
             time.sleep(1)
@@ -30,12 +30,20 @@ def tudo():
 def cadastrar_restaurante():
    subprocess.check_call("cls", shell=True)
    print('cadastrar restaurante')
-   nomeRestaurante = input('digite o nome do restaurante que deseja cadastrar')
+   nomeRestaurante = input('digite o nome do restaurante que deseja cadastrar: \n')
    restaurantes.append(nomeRestaurante)
    print(f'o {nomeRestaurante} foi cadastrado com sucesso!')
    input('digite qualquer tecla para sair')
+   subprocess.check_call("cls", shell=True)
    main()
-
+def listar_restaurantes():
+   subprocess.check_call("cls", shell=True)
+   print('listando restaurantes:\n')
+   for restaurante in restaurantes:
+      print(restaurante)
+   input('digite qualquer tecla para sair\n')
+   subprocess.check_call("cls", shell=True)
+   main()
 def opcao_invalida():
    print('Opção Ivalida')
    input('aperte qualquer tecla para voltar')
