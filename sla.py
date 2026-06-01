@@ -48,6 +48,7 @@ def opcao_invalida():
    print('Opção Ivalida')
    input('aperte qualquer tecla para voltar')
    main()
+   
 def main():
    tudo()
 if __name__ == '__main__': 
