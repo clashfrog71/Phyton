@@ -48,10 +48,16 @@ def opcao_invalida():
    print('Opção Ivalida')
    input('aperte qualquer tecla para voltar')
    main()
+def teste():
+   numero = 0
+   while numero > -1:
+      for _ in range(2):
+         print('teste')
+      numero+=1       
+        
    
 def main():
-   tudo()
+   teste()
 if __name__ == '__main__': 
    main()
    
-  
