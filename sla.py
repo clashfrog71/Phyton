@@ -33,31 +33,24 @@ def cadastrar_restaurante():
    nomeRestaurante = input('digite o nome do restaurante que deseja cadastrar: \n')
    restaurantes.append(nomeRestaurante)
    print(f'o {nomeRestaurante} foi cadastrado com sucesso!')
-   input('digite qualquer tecla para sair')
-   subprocess.check_call("cls", shell=True)
-   main()
+   voltar_MenuPrincipal()
 def listar_restaurantes():
    subprocess.check_call("cls", shell=True)
    print('listando restaurantes:\n')
    for restaurante in restaurantes:
       print(restaurante)
-   input('digite qualquer tecla para sair\n')
-   subprocess.check_call("cls", shell=True)
-   main()
+   voltar_MenuPrincipal()
 def opcao_invalida():
    print('Opção Ivalida')
+   voltar_MenuPrincipal()
+def voltar_MenuPrincipal():
    input('aperte qualquer tecla para voltar')
+   subprocess.check_call("cls", shell=True)
    main()
-def teste():
-   numero = 0
-   while numero > -1:
-      for _ in range(2):
-         print('teste')
-      numero+=1       
-        
+
    
 def main():
-   teste()
+   tudo()  
 if __name__ == '__main__': 
    main()
    
